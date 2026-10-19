@@ -3,7 +3,7 @@
    - Everything is precached into ONE cache named for the build, all-or-nothing; the page is only ever served from that single cache, so old and new files never mix.
    - A new version waits until the app tells it to take over (or all tabs close), so an editing session is never interrupted.
    - Only caches created by this app (bn-shell-* and the legacy bn-vN) are ever deleted. User data (IndexedDB/localStorage) is never touched here. */
-const BUILD="2026-10-17.3",PREFIX="bn-shell-",CACHE=PREFIX+BUILD,SCOPE=self.registration.scope;
+const BUILD="2026-10-17.5",PREFIX="bn-shell-",CACHE=PREFIX+BUILD,SCOPE=self.registration.scope;
 const ASSETS=["index.html","manifest.webmanifest","icon.svg","icon-192.png","icon-512.png","apple-touch-icon.png"],U=p=>new URL(p,SCOPE).href;
 self.addEventListener("install",e=>e.waitUntil((async()=>{
   try{
